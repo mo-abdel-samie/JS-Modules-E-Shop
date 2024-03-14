@@ -6,8 +6,9 @@ export const linksData = [
   {
     title: "Contact",
     url: "contact.html",
-  },{
-    title: "Contact",
-    url: "contact.html",
+  },
+  {
+    title: "Sigle Product 1",
+    url: "singleProduct.html?id=1",
   },
 ];

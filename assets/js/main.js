@@ -1,5 +1,12 @@
 import "../lib/bootstrap-5.3.1-dist/js/bootstrap.bundle.js";
-import { getElement, createNavLink, addNavLink, getData } from "./utils.js";
+import {
+  createNavLink,
+  addNavLink,
+  getData,
+  addProductCard,
+  createProductCardUi,
+  getUrlParam,
+} from "./utils.js";
 import { linksData } from "./DataSets.js";
 
 // const divs = getElement("#bg-yellow");
@@ -13,5 +20,7 @@ linksData.forEach((link) => {
 });
 
 getData("https://fakestoreapi.com/products", (products) => {
-    console.log(products);   
+  products.forEach((product) => addProductCard(createProductCardUi(product)));
 });
+
+console.log(getUrlParam("id"));
